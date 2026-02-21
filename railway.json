@@ -1,8 +1,9 @@
 {
   "build": {
-    "builder": "DOCKERFILE"
+    "builder": "NIXPACKS"
   },
   "deploy": {
+    "startCommand": "python3 -m http.server 3000 --directory dist",
     "healthcheckPath": "/",
     "healthcheckTimeout": 300
   }
