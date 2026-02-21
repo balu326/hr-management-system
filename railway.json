@@ -3,8 +3,10 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "npx vite preview --host 0.0.0.0 --port $PORT",
+    "startCommand": "npx vite preview --host 0.0.0.0 --port ${PORT:-3000}",
     "healthcheckPath": "/",
-    "healthcheckTimeout": 300
+    "healthcheckTimeout": 300,
+    "healthcheckInterval": 10,
+    "healthcheckThreshold": 1
   }
 }
