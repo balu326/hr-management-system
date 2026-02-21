@@ -8,10 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm ci
 
 # Copy source code
 COPY . .
+
+# Fix permissions for node_modules executables
+RUN chmod +x node_modules/.bin/*
 
 # Build the application
 RUN npm run build
