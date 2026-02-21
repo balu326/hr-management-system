@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksConfigPath": "./nixpacks.toml"
+  },
+  "deploy": {
+    "startCommand": "npx vite preview --port $PORT",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 300
+  }
+}

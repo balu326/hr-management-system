@@ -38,7 +38,7 @@ export async function getUsers(): Promise<User[]> {
   }
 }
 
-export async function saveUsers(users: User[]): Promise<void> { 
+export async function saveUsers(_users: User[]): Promise<void> { 
   console.warn('saveUsers: Use updateUser for individual updates');
 }
 
@@ -79,7 +79,7 @@ export async function getAttendance(): Promise<AttendanceRecord[]> {
   }
 }
 
-export async function saveAttendance(records: AttendanceRecord[]): Promise<void> { 
+export async function saveAttendance(_records: AttendanceRecord[]): Promise<void> { 
   console.warn('saveAttendance: Use addAttendance for individual records');
 }
 
@@ -102,7 +102,7 @@ export async function getLeaves(): Promise<LeaveRequest[]> {
   }
 }
 
-export async function saveLeaves(leaves: LeaveRequest[]): Promise<void> { 
+export async function saveLeaves(_leaves: LeaveRequest[]): Promise<void> { 
   console.warn('saveLeaves: Use addLeave/updateLeaveStatus for individual updates');
 }
 
@@ -153,7 +153,7 @@ export async function getFiles(): Promise<UploadedFile[]> {
   }
 }
 
-export async function saveFiles(files: UploadedFile[]): Promise<void> { 
+export async function saveFiles(_files: UploadedFile[]): Promise<void> { 
   console.warn('saveFiles: Use addFile/deleteFile for individual operations');
 }
 
@@ -220,7 +220,7 @@ export async function getAnnouncements(): Promise<Announcement[]> {
   }
 }
 
-export async function saveAnnouncements(announcements: Announcement[]): Promise<void> { 
+export async function saveAnnouncements(_announcements: Announcement[]): Promise<void> { 
   console.warn('saveAnnouncements: Use addAnnouncement/deleteAnnouncement for individual operations');
 }
 
